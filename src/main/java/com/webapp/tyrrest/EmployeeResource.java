@@ -18,14 +18,7 @@ public class EmployeeResource {
 	
 	EmployeeRepo repo = new EmployeeRepo();
 	
-	
-	//@GET
-	//@Produces(MediaType.APPLICATION_JSON)
-	//public List<Employee> getEmployees() {
-		
-	//	return repo.getEmployees();
-		
-	//}
+
 	@GET
 	@Path("/{id}")
 	@Produces(MediaType.APPLICATION_JSON)
@@ -75,10 +68,7 @@ public class EmployeeResource {
 			repo.delete(id);
 		return e;
 	}
-	/*
-	  @DELETE 
-	  public Employee DeleteEmployee
-	 */
+
 	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
@@ -117,41 +107,6 @@ public class EmployeeResource {
 	}
 	
 
-
-
-	
-	//if using orderBy and orderType uncomment the below lines of code
-	
-	/*@GET
-	@Produces(MediaType.APPLICATION_JSON)
-	public List<Employee> getEmployees(
-	        @QueryParam("orderBy") String orderBy,
-	        @QueryParam("orderType") String orderType) {
-
-	    List<Employee> employees;
-
-	    if ("id".equalsIgnoreCase(orderBy)) {
-	        if ("desc".equalsIgnoreCase(orderType)) {
-	            employees = repo.getEmployeesDesc(); }
-	         else {
-	            employees = repo.getEmployees();
-	        }
-	    } else if ("name".equalsIgnoreCase(orderBy)) {
-	        if ("desc".equalsIgnoreCase(orderType)) {
-	            employees = repo.getEmployeesDescName();
-	        
-	        } else {
-	          
-	            employees = repo.getEmployeesAsc();
-	        }
-	    } else {
-	        
-	        employees = repo.getEmployees();
-	    }
-
-	    return employees;
-	}
-*/
 
 	
 }
